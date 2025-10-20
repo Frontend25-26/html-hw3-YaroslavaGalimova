@@ -1,6 +1,129 @@
-body {
-    margin: 0;
-    padding: 0;
-
-    background: #292929;
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
+
+body {
+    margin: .5em;
+    padding: .5em;
+    background: url("/img/new-back.jpg") top fixed;
+    background-size: cover;
+    color: white;
+    font-family: monospace;
+    text-align: center;
+}
+
+header {
+    font-family: "Press Start 2P", system-ui;
+    margin-top: -1em;
+}
+
+header a {
+    color: plum;
+    text-decoration: dashed underline;
+}
+
+header a:hover {
+    text-shadow: 0 0 10px white;
+}
+
+div.test {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+div.question {
+    font-size: 1.2em;
+    padding: .5em;
+    width: 70%;
+    margin: auto;
+    border: 3px dashed plum;
+}
+
+div.question img {
+    width: 75%;
+    height: auto;
+    box-shadow: 0 0 10px white;
+}
+
+div.question p {
+    margin: 1em 0;
+    padding: 0.5em;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+div.question > h2 {
+    margin-top: 0;
+}
+
+.comments-after-question {
+    font-size: 0.8em;
+    color: lightgray;
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+.answers :is(input[type="checkbox"], input[type="radio"]) {
+    width: 1.25em;
+    height: 1.25em;
+    margin-left: 20%;
+}
+
+.question:has(.check-button:checked) .answers input:checked + label.correct .answer-test {
+    color: lightgreen;
+    border: 2px solid green;
+}
+
+.question:has(.check-button:checked) .answers input:checked + label.incorrect .answer-test {
+    color: pink;
+    border: 2px solid red;
+}
+
+.check-button {
+    width: 10em;
+    height: 2em;
+    margin-bottom: 1em;
+    appearance: none;
+
+    border: 3px solid white;
+    border-radius: 3px;
+    background-color: transparent;
+
+    position: relative;
+}
+
+.check-button:checked {
+    background: white;
+}
+
+.check-button::after {
+    content: "Проверить себя";
+    font-size: 1em;
+    font-family: monospace;
+    color: white;
+
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.check-button:checked::after {
+    content: "ответы ↑";
+    color: black;
+}
+
