@@ -4,11 +4,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Press+Start+2P&display=swap" rel="stylesheet">
     <title>HW3</title>
 </head>
 <body>
-    <div id="app">
-        
-    </div>
+    <header class="name">
+        <h1>Квиз</h1>
+        <h2>на знание JavaScript</h2>
+        <a href="https://itmo-frontend-lectures.vercel.app/index.html">Вспомнить всё</a>
+    </header>
+    <main>
+        <div class="test">
+            <div class="question" id="question1">
+                <h2>Вопрос 1</h2>
+                <img src="/img/question1.png" alt="Вопрос 1" width="500" height="auto">
+                <p>Какие пары строк выведут одинаковый результат?</p>
+                <div class="answers">
+                    <div class="option">
+                        <input type="radio" name="question1"><label class="incorrect"> <span class="answer-test">1 и 4</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="question1"><label class="correct"> <span class="answer-test">2 и 3</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="question1"><label class="incorrect"> <span class="answer-test">3 и 4</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="question1"><label class="incorrect"> <span class="answer-test">1 и 2</span></label>
+                    </div>
+                </div>
+                <input type="checkbox" class="check-button">
+            </div>
+            <div class="question" id="question2">
+                <h2>Вопрос 2</h2>
+                <img src="/img/question2.png" alt="Вопрос 2" width="500" height="auto">
+                <p>
+                    Какие вызовы создадут новый объект?
+                    <br>
+                    <span class="comments-after-question">Это вопрос с множественным выбором. Найди ровно 2 правильных ответа!</span>
+                </p>
+                <div class="answers">
+                    <div class="option">
+                        <input type="checkbox" name="question2"> <label class="incorrect"><span class="answer-test">University("ITMO", "Saint-Petersburg")</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="question2"> <label class="correct"><span class="answer-test">new University("ITMO", "Saint-Petersburg")</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="question2"> <label class="incorrect"><span class="answer-test">const uni = new University("ITMO", "Saint-Petersburg")</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="question2"> <label class="correct"><span class="answer-test">Object.create(University.prototype)</span></label>
+                    </div>
+                </div>
+                <input type="checkbox" class="check-button">
+            </div>
+            <div class="question" id="question3">
+                <h2>Вопрос 3</h2>
+                <img src="/img/question3.png" alt="Вопрос 3" width="500" height="auto">
+                <p>Что будет выведено в консоль?</p>
+                <div class="answers">
+                    <div class="option">
+                        <input type="radio" name="question3"><label class="incorrect"><span class="answer-test">"122", "122", "022", "112"</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="question3"><label class="incorrect"><span class="answer-test">"5", "32", "02", "32"</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="question3"><label class="incorrect"><span class="answer-test">"5", "32", "02", "112"</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="question3"><label class="correct"><span class="answer-test">"122", "32", "02", "112"</span></label>
+                    </div>
+                </div>
+                <input type="checkbox" class="check-button">
+            </div>
+            <div class="question" id="question4">
+                <h2>Вопрос 4</h2>
+                <img src="/img/question4.png" alt="Вопрос 4" width="500" height="auto">
+                <p>Сколько различных строк будет выведено в консоль?</p>
+                <div class="answers">
+                    <div class="option">
+                        <input type="radio" name="question4"><label class="incorrect"><span class="answer-test">1</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="question4"><label class="incorrect"><span class="answer-test">2</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="question4"><label class="incorrect"><span class="answer-test">3</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="question4"><label class="correct"><span class="answer-test">4</span></label>
+                    </div>
+                </div>
+                <input type="checkbox" class="check-button">
+            </div>
+            <div class="question" id="question5">
+                <h2>Вопрос 5</h2>
+                <img src="/img/question5.png" alt="Вопрос 5" width="500" height="auto">
+                <p>
+                    В каких строчках коту всё же удастся мяукнуть?
+                    <br>
+                    <span class="comments-after-question">Это вопрос с множественным выбором. Найди ровно 2 правильных ответа!</span>
+                </p>
+                <div class="answers">
+                    <div class="option">
+                        <input type="checkbox" name="question5"><label class="correct"> <span class="answer-test">1</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="question5"><label class="incorrect"> <span class="answer-test">2</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="question5"><label class="incorrect"> <span class="answer-test">3</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="question5"><label class="incorrect"> <span class="answer-test">4</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="checkbox" name="question5"><label class="correct"> <span class="answer-test">5</span></label>
+                    </div>
+                </div>
+                <input type="checkbox" class="check-button">
+            </div>
+            <h2>А теперь - несколько шуток!</h2>
+            <div class="question" id="question6">
+                <h2>Вопрос 6</h2>
+                <img src="/img/question6.png" alt="Вопрос 6" width="500" height="auto">
+                <p>Какой будет результат выполнения следующего кода?</p>
+                <div class="answers">
+                    <div class="option">
+                        <input type="radio" name="question6"><label class="incorrect"><span class="answer-test">baba</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="question6"><label class="incorrect"><span class="answer-test">baa</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="question6"><label class="correct"><span class="answer-test">banana</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="question6"><label class="incorrect"><span class="answer-test">nannan</span></label>
+                    </div>
+                </div>
+                <input type="checkbox" class="check-button">
+            </div>
+            <div class="question" id="question7">
+                <h2>Вопрос 7</h2>
+                <img src="/img/question7.png" alt="Вопрос 7" width="500" height="auto">
+                <p>Что будет выведено в консоль?</p>
+                <div class="answers">
+                    <div class="option">
+                        <input type="radio" name="question7"><label class="correct"><span class="answer-test">23</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="question7"><label class="incorrect"><span class="answer-test">NaN</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="question7"><label class="incorrect"><span class="answer-test">0</span></label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" name="question7"><label class="incorrect"><span class="answer-test">undefined</span></label>
+                    </div>
+                </div>
+                <input type="checkbox" class="check-button">
+            </div>
+    </main>
 </body>
 </html>
